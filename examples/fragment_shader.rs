@@ -59,12 +59,6 @@ fn setup(
     ));
 }
 
-fn rotate(mut query: Query<&mut Transform, With<Shape>>, time: Res<Time>) {
-    for mut transform in &mut query {
-        transform.rotate_y(time.delta_secs() / 2.);
-    }
-}
-
 fn setup_custom_material(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
@@ -77,6 +71,12 @@ fn setup_custom_material(
         Transform::from_xyz(1.0, 2.0, 1.0).with_rotation(Quat::from_rotation_x(-PI / 4.)),
         Shape,
     ));
+}
+
+fn rotate(mut query: Query<&mut Transform, With<Shape>>, time: Res<Time>) {
+    for mut transform in &mut query {
+        transform.rotate_y(time.delta_secs() / 2.);
+    }
 }
 
 #[derive(Asset, TypePath, AsBindGroup, Debug, Clone)]
