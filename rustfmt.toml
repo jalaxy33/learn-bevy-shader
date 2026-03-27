@@ -1,0 +1,6 @@
+# imports_indent = "Visual"
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
+
+max_width = 100
+wrap_comments = true

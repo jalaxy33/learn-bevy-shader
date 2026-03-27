@@ -1,0 +1,7 @@
+# <PROJECT_ROOT>/rust-toolchain.toml
+
+
+# use nightly toolchain
+##  rustup toolchain install nightly
+[toolchain]
+channel = "nightly"

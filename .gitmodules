@@ -1,0 +1,4 @@
+[submodule "references/bevy"]
+	path = references/bevy
+	url = https://github.com/bevyengine/bevy
+	branch = main
